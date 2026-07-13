@@ -96,18 +96,6 @@ button:hover{
 
 }
 
-/* 카테고리 버튼 */
-
-.category-buttons{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:10px;
-
-}
-
 /* 결과창 */
 
 #resultBox{
@@ -119,6 +107,18 @@ button:hover{
     padding:10px;
 
     border-radius:8px;
+
+}
+
+/* 카테고리 버튼 */
+
+.category-buttons{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:10px;
 
 }
 

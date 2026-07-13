@@ -1,58 +1,47 @@
 // 분리배출 정보를 저장하는 객체
 const recycleData = {
-    "페트병": {
-        category: "플라스틱",
-        method: [
-            "내용물을 모두 비워 주세요.",
-            "물로 깨끗하게 헹궈 주세요.",
-            "라벨을 제거해 주세요.",
-            "압착한 후 배출해 주세요."
-        ]
+    "칫솔": {
+        category: "일반쓰레기",
+        method: []
     },
 
-    "플라스틱 컵": {
-        category: "플라스틱",
-        method: [
-            "내용물을 비워 주세요.",
-            "물로 헹궈 주세요.",
-            "일반 플라스틱으로 배출하세요."
-        ]
+    "치약": {
+        category: "일반쓰레기",
+        method: ["치약 뚜껑은 플라스틱으로 분리배출"]
     },
 
-    "신문지": {
-        category: "종이",
+    "알약 포장재": {
+        category: "일반쓰레기",
         method: [
-            "물기에 젖지 않게 묶어서 배출하세요."
-        ]
-    },
-
-    "샴푸통": {
-        category: "플라스틱",
-        method: [
-            "내용물을 비운다.",
-            "물로 헹군다.",
-            "플라스틱으로 배출한다."
-        ]
-    },
-
-    "요구르트병": {
-        category: "플라스틱",
-        method: [
-            "깨끗이 씻은 후 플라스틱으로 배출한다."
+            "남은 약-> 폐의약품 수거함",
+            "분리형 포장재-> 분리 가능 시 각각 플라스틱, 금속류로 분리배출",
+            "분리 어려울 시 일반쓰레기로 배출"
         ]
     },
 
     "우유팩": {
-        category: "종이",
+        category: "종이팩",
         method: [
-            "물로 헹군 후 말려서 전용 수거함에 배출한다."
+            "내용물 비우기",
+            "세척 후 건조",
+            "종이팩 전용 수거함에 배출"
         ]
     },
 
-    "택배상자": {
-        category: "종이",
+    "알루미늄 호일": {
+        category: "일반쓰레기",
+        method: []
+    },
+
+    "계란 껍질, 양파 껍질, 생선 가시": {
+        category: "일반쓰레기",
+        method: []
+    },
+
+    "과일 씨앗": {
+        category: "일반쓰레기",
         method: [
-            "테이프를 제거한 뒤 접어서 배출한다."
+            "배, 사과 등의 작은 씨앗은 음식물 쓰레기로 배출 가능"
         ]
     },
 
@@ -66,49 +55,82 @@ const recycleData = {
     "참치캔": {
         category: "캔",
         method: [
-            "내용물을 제거하고 헹군 후 배출한다."
+            "내용물을 제거하고 헹군 후 배출"
         ]
     },
 
     "소주병": {
         category: "유리",
         method: [
-            "병뚜껑을 제거하고 배출한다."
+            "병뚜껑을 제거하고 배출"
         ]
     },
 
     "맥주병": {
         category: "유리",
         method: [
-            "빈 병은 병류로 배출한다."
+            "빈 병은 병류로 배출"
         ]
     },
 
     "비닐봉투": {
         category: "비닐",
         method: [
-            "이물질을 제거한 후 배출한다."
+            "이물질을 제거한 후 배출"
         ]
     },
 
     "과자봉지": {
         category: "비닐",
         method: [
-            "내용물을 비우고 깨끗하면 비닐로 배출한다."
+            "내용물을 비우고 깨끗하면 비닐로 배출"
         ]
     },
 
     "휴지": {
         category: "일반쓰레기",
         method: [
-            "재활용이 불가능하므로 일반쓰레기로 버린다."
+            "재활용 불가능"
         ]
     },
 
     "영수증": {
         category: "일반쓰레기",
         method: [
-            "감열지는 일반쓰레기로 배출한다."
+            "감열지는 일반쓰레기로 배출"
+        ]
+    },
+
+    "페트병": {
+        category: "플라스틱",
+        method: [
+            "내용물 비우기",
+            "세척 후 건조",
+            "플라스틱으로 분리배출"
+        ]
+    },
+
+    "즉석밥 용기": {
+        category: "플라스틱",
+        method: [
+            "내용물 비우기",
+            "세척 후 건조",
+            "플라스틱으로 분리배출"
+        ]
+    },
+
+    "책": {
+        category: "종이",
+        method: [
+            "표지가 코팅되어 있을 경우 제거하고 분리배출"
+        ]
+    },
+
+    "택배박스": {
+        category: "종이",
+        method: [
+            "물에 젖었을 경우 재활용 불가",
+            "테이프를 제거한 후 분리배출"
         ]
     }
 };
@@ -122,25 +144,25 @@ const quizData = [
     {
         question: "페트병은 플라스틱으로 분리배출한다.",
         answer: true,
-        explanation: "정답! 깨끗이 씻고 라벨을 제거한 후 플라스틱으로 배출합니다."
+        explanation: "정답- 깨끗이 씻고 라벨을 제거한 후 플라스틱으로 배출"
     },
 
     {
         question: "영수증은 종이류로 분리배출한다.",
         answer: false,
-        explanation: "정답! 영수증은 감열지이므로 일반쓰레기입니다."
+        explanation: "정답- 영수증은 감열지이므로 일반쓰레기"
     },
 
     {
         question: "우유팩은 일반 종이와 함께 버린다.",
         answer: false,
-        explanation: "정답! 우유팩은 전용 수거함에 배출해야 합니다."
+        explanation: "정답- 우유팩은 전용 수거함에 배출"
     },
 
     {
         question: "내용물이 남은 캔은 바로 분리배출해도 된다.",
         answer: false,
-        explanation: "정답! 내용물을 비우고 헹군 후 배출해야 합니다."
+        explanation: "정답- 내용물을 비우고 헹군 후 배출"
     }
 
 ];
@@ -166,14 +188,14 @@ function checkAnswer(userAnswer){
     if(userAnswer === quizData[currentQuiz].answer){
 
         quizResult.innerHTML =
-        "✅ " + quizData[currentQuiz].explanation;
+        quizData[currentQuiz].explanation;
 
     }
 
     else{
 
         quizResult.innerHTML =
-        "❌ 틀렸습니다.<br>" +
+        "틀렸습니다.<br>" +
         quizData[currentQuiz].explanation;
 
     }
@@ -233,7 +255,7 @@ function showItem(item){
 
         <p><strong>분류 :</strong> ${info.category}</p>
 
-        <ul>
+        <ol>
     `;
 
     info.method.forEach(function(step){
@@ -242,7 +264,7 @@ function showItem(item){
 
     });
 
-    html += "</ul>";
+    html += "</ol>";
 
     resultBox.innerHTML = html;
 
@@ -279,7 +301,7 @@ for (const item in recycleData) {
             <h3>${item}</h3>
             <p><strong>분류 :</strong> ${recycleData[item].category}</p>
 
-            <ul>
+            <ol>
         `;
 
         recycleData[item].method.forEach(function(step){
@@ -289,7 +311,7 @@ for (const item in recycleData) {
         });
 
         html += `
-            </ul>
+            </ol>
         </div>
         `;
 
@@ -331,7 +353,7 @@ categoryButtons.forEach(function(button){
         // 버튼에 적혀 있는 글자 가져오기
         const category = button.textContent;
 
-        let html = `<h3>${category}</h3><ul>`;
+        let html = `<h3>${category}</h3><ol>`;
 
         // 모든 품목 검사
         for(const item in recycleData){
@@ -349,7 +371,7 @@ categoryButtons.forEach(function(button){
 
         }
 
-        html += "</ul>";
+        html += "</ol>";
 
         resultBox.innerHTML = html;
         // 생성된 품목 버튼 가져오기
