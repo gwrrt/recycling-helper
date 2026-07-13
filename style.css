@@ -1,0 +1,173 @@
+body{
+
+    margin:0;
+
+    font-family:Arial, sans-serif;
+
+    background:#eaf8ee;
+
+}
+
+/* 가운데 정렬되는 흰색 카드 */
+
+.container{
+
+    max-width:450px;
+
+    margin:auto;
+
+    padding:20px;
+
+}
+
+/* 제목 */
+
+h1{
+
+    text-align:center;
+
+    color:#2e7d32;
+
+}
+
+/* 각 구역 */
+
+section{
+
+    background:white;
+
+    padding:15px;
+
+    margin-top:20px;
+
+    border-radius:12px;
+
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+
+}
+
+/* 검색창 */
+
+input{
+
+    width:100%;
+
+    padding:12px;
+
+    font-size:16px;
+
+    box-sizing:border-box;
+
+    border-radius:8px;
+
+    border:1px solid #ccc;
+
+}
+
+/* 모든 버튼 */
+
+button{
+
+    margin-top:10px;
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#43a047;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+/* 버튼에 마우스를 올렸을 때 */
+
+button:hover{
+
+    background:#2e7d32;
+
+}
+
+/* 카테고리 버튼 */
+
+.category-buttons{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:10px;
+
+}
+
+/* 결과창 */
+
+#resultBox{
+
+    min-height:80px;
+
+    background:#f6f6f6;
+
+    padding:10px;
+
+    border-radius:8px;
+
+}
+
+/* 퀴즈 */
+
+.quiz-box{
+
+    background:#fff8dc;
+
+    padding:10px;
+
+    border-radius:8px;
+
+}
+
+/* ======================
+품목 버튼
+====================== */
+
+.item-btn{
+
+    width:100%;
+
+    margin-top:8px;
+
+    background:#43a047;
+
+    color:white;
+
+}
+
+.item-btn:hover{
+
+    background:#2e7d32;
+
+    color:white;
+
+}
+
+.quiz-box button{
+
+    margin-top:10px;
+
+}
+
+#quizResult{
+
+    font-weight:bold;
+
+    margin-top:15px;
+
+}

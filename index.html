@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>분리수거 도우미</title>
+
+    <!-- css 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 몸통 -->
+    <div class="container">
+        <h1>분리수거 도우미</h1>
+
+        <!-- 검색 -->
+        <section class="search-section">
+
+            <input
+                type = "text"
+                id = "searchInput"
+                placeholder = "품목을 입력하세요">
+
+            <button id = "searchBtn">
+                검색
+            </button>
+
+        </section>
+
+        <!-- 카테고리 -->
+        <section>
+
+            <h2>카테고리</h2>
+
+            <div class="category-buttons">
+                
+                <button class="category-btn">플라스틱</button>
+                <button class="category-btn">종이</button>
+                <button class="category-btn">유리</button>
+                <button class="category-btn">캔</button>
+                <button class="category-btn">비닐</button>
+                <button class="category-btn">일반쓰레기</button>
+
+
+            </div>
+
+        </section>
+
+        <!-- 결과 -->
+        <section>
+
+            <h2>검색 결과</h2>
+
+            <div id="resultBox">
+
+                아직 검색 결과가 없습니다.
+
+            </div>
+
+        </section>
+
+        <!-- 환경 퀴즈 -->
+        <section>
+
+            <h2>🧠 환경 퀴즈</h2>
+
+            <div class="quiz-box">
+
+                <!-- 문제 -->
+                <p id="quizQuestion"></p>
+
+                <!-- O, X 버튼 -->
+                <button id="trueBtn">O</button>
+
+                <button id="falseBtn">X</button>
+
+                <!-- 결과 -->
+                <p id="quizResult"></p>
+
+                <!-- 다음 문제 -->
+                <button id="nextQuizBtn">
+                    다음 문제
+                </button>
+
+            </div>
+
+        </section>
+
+    <!-- JavaScript 연결 -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
